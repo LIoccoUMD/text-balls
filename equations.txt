@@ -1,0 +1,6 @@
+            # x = cx + R*np.cos(t),
+            # y = cy + R*np.sin(t),
+            # x = cx + (np.cos(t)*np.sin(4*t)),
+            # y = cy + (np.sin(t)*np.sin(4*t)),
+            # x = cx + (np.cos(t)**3),
+            # y = cy + (np.sin(t)**3),

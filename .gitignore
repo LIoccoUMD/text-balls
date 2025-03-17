@@ -1,0 +1,19 @@
+# Generated output files
+bouncing_balls.gif
+
+# Virtual environment
+.venv
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Common editor/IDE files (add if you use these tools)
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
