@@ -85,20 +85,20 @@ def initialize():
     
     A circle of balls moving a swirling way
     """
-    width, height = 16, 9
+    width, height = 21, 9
     elasticity = 0.96  # Elasticity of objects.  Must be <=1.
     # Values closer to 1 mean the bounces do not lose much energy.
     space = setup_space(width, height, elasticity)
 
     # Create a circle with radius R, composed of N balls with radius r
-    N, R, r = 33, 2.5, 0.2
+    N, R, r = 50, 2.5, 0.2
     # center of the circle (8, 4.5)
     cx, cy = width / 2, height / 2
     # velocity of each ball in the tangential direction
     vt = 3.0
     # random component of each ball's velocity (uniform)
     vrand = 0.5
-    balls_data = mktext("Looch",cx=8,cy=4.5,vrand=0.5,vrot=3.0,maxwidth=12,maxheight=5)
+    balls_data = mktext("UMD",cx=8,cy=4.5,vrand=0.5,vrot=3.0,maxwidth=12,maxheight=5)
     balls = []
     
     np.random.seed(0)  # make sure that outputs of this function are repeatable
@@ -123,7 +123,7 @@ def initialize():
 """
 Actually run the simulations
 """
-BALL_COLOR = "hsv"
+BALL_COLOR = "hot"
 T = 4  # how long to simulate?
 dt = 1/300  # we simulate 300 timesteps per second
 # ------------------->
