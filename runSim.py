@@ -85,20 +85,20 @@ def initialize():
     
     A circle of balls moving a swirling way
     """
-    width, height = 21, 9
-    elasticity = 0.96  # Elasticity of objects.  Must be <=1.
+    width, height = 16, 9
+    elasticity = 0.99  # Elasticity of objects.  Must be <=1.
     # Values closer to 1 mean the bounces do not lose much energy.
     space = setup_space(width, height, elasticity)
 
     # Create a circle with radius R, composed of N balls with radius r
-    N, R, r = 50, 2.5, 0.2
+    N, R, r = 1000, 2.5, 0.05
     # center of the circle (8, 4.5)
     cx, cy = width / 2, height / 2
     # velocity of each ball in the tangential direction
     vt = 3.0
     # random component of each ball's velocity (uniform)
     vrand = 0.5
-    balls_data = mktext("UMD",cx=8,cy=4.5,vrand=0.5,vrot=3.0,maxwidth=12,maxheight=5)
+    balls_data = mktext("THIS IS ROCKET LEAGUE!!!!",cx=8,cy=4.5,vrand=0.5,vrot=3.0,maxwidth=12,maxheight=5)
     balls = []
     
     np.random.seed(0)  # make sure that outputs of this function are repeatable
@@ -107,11 +107,11 @@ def initialize():
     y_eq = 2
 
     # for t in np.linspace(0, 2 * np.pi, N, endpoint=False):
-    for cx, cy, r, vx,vy,cs in balls_data:
+    for cx, cy, r, vx,vy,cs in balls_data: 
         balls.append(mk_ball(cx,cy,vx,vy,r,elasticity,space))
         # balls.append(mk_ball(
-        #     x = cx + (R * np.cos(1*t)),
-        #     y = cy + (R * np.sin(1*t)),
+        #     x = cx + (np.cos(t)**3),
+        #     y = cy + (np.sin(t)**3),
         #     vx=vt*np.cos(t+np.pi/2) + np.random.lognormal(-vrand, +vrand),
         #     vy=vt*np.sin(t+np.pi/2) + np.random.lognormal(-vrand, +vrand),
         #     radius=r,
@@ -123,7 +123,7 @@ def initialize():
 """
 Actually run the simulations
 """
-BALL_COLOR = "hot"
+BALL_COLOR = "gnuplot2"
 T = 4  # how long to simulate?
 dt = 1/300  # we simulate 300 timesteps per second
 # ------------------->
