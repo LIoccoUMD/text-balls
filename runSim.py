@@ -6,6 +6,7 @@ import pymunk
 from pymunk.vec2d import Vec2d
 from ballsText import mktext
 
+
 def setup_space(width, height, elasticity):
     """
     Returns a pymunk Space object initialized with gravity pointing down and walls on the left,
